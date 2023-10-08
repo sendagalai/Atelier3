@@ -1,0 +1,24 @@
+<h1>Bonjour {{ name|upper }}</h1>
+
+<p>Nombre d'auteurs : {{ auth|length }}</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Nombre de livres</th>
+            <th>Image</th>
+            <th>Détails</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for t in auth %}
+            <tr>
+                <td>{{ t.username|upper }}</td>
+                <td>{{ t.nb_books }}</td>
+                <td><img src="{{ t.picture }}" alt="{{ t.username }}'s Picture"></td>
+                <td><a href="{{ path('details_auteur', {'id': t.id}) }}">Détails</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

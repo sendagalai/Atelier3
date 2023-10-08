@@ -1,0 +1,25 @@
+index:
+    path: /
+    controller: App\Controller\ServiceController::index
+
+service_index:
+    path: /service/index
+    controller: App\Controller\ServiceController::index
+
+
+show_service:
+    path: /service/show/{name}
+    controller: App\Controller\ServiceController::showService
+
+details_auteur:
+    path: /service/show/{id}
+    controller: App\Controller\ServiceController::showService
+
+
+test1:
+    path: /test1
+    controller: App\Controller\testcontroller::test1
+
+test:
+    path: /test
+    controller: App\Controller\testcontroller::test
